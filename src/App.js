@@ -1,4 +1,4 @@
-import AddVet from './AddVet/AddVet';
+import AddVet from './AddVet/AddVet.js';
 import './App.css';
 const HOST = 'http://localhost:3002';
 
