@@ -1,6 +1,6 @@
 import AddVet from './AddVet/AddVet';
 import './App.css';
-const HOST = 'localhost:3002';
+const HOST = 'http://localhost:3002';
 
 function App() {
   return (

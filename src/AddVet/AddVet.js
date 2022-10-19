@@ -1,17 +1,23 @@
-function AddVet(host) {
+function AddVet({host}) {
 
     const vetData = {
-        
+        name: 'John Doe',
+        city: 'Toronto',
+        province: 'ON'
     }
     async function sendAddVetReq() {
-        fetch(host, {
+
+        const url = host + '/addVet';
+        
+        fetch(url, {
             headers: {
               'Content-Type': 'application/json'
             },
             method: "POST",
-            body: JSON.stringify({a: 1, b: 2})
+            body: JSON.stringify(vetData)
         })
-        .then();
+        .then(res => res.json())
+        .then(data => console.log(data));
     }
     return (<>
         <button onClick={sendAddVetReq}>Add Vet</button>
