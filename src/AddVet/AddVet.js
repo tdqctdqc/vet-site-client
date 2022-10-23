@@ -30,11 +30,8 @@ function AddVet({host}) {
             <input type="text" name="name" minLength="2" maxLength="255" required/>
             <label htmlFor="city">City:</label>
             <input type="text" name="city" minLength="2" maxLength="255" required/>
-
             <label htmlFor="province">Province:</label>
             <ProvinceSelector/>
-
-
             <input type="submit" />
         </form>
         <button onClick={defaultAddVetReq}>Add Vet</button>

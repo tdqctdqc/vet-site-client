@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function DisplayVet({host}) {
 
@@ -19,7 +20,9 @@ function DisplayVet({host}) {
     }, [host, id]);
 
     return (<>
-        {JSON.stringify(vetData)}
+        <h1>{vetData.name}</h1>
+        <Link to={`/vet/${id}/clients`}>See Clients</Link>
+        <Link to={`/vet/${id}/patients`}>See Patients</Link>
     </>);
 }
 
