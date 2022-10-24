@@ -15,7 +15,6 @@ function DisplayVetClients({host}) {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             setClientData(data);
         });
     }, [host, id]);
@@ -34,7 +33,7 @@ function DisplayVetClients({host}) {
                 <tbody>
                     {
                         clientData.map(client => {
-                            return <tr>
+                            return <tr key={client.id}>
                                 <td> <a href={`/vet/${id}/clients/${client.id}`}>{client.name}</a></td>
                                 <td>{client.city}</td>
                                 <td>{client.province}</td>

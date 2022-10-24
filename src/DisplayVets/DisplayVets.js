@@ -14,6 +14,8 @@ function DisplayVets({host}) {
     }, [host]);
 
     return (
+        <>
+        <h1>Vets</h1>
         <table>
             <thead>
                 <tr>
@@ -34,6 +36,7 @@ function DisplayVets({host}) {
                 }
             </tbody>
         </table>
+        </>
     );
 }
 

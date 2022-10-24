@@ -48,20 +48,25 @@ function DisplayVetClient({host}) {
             
             } */}
             <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Species</th>
-                    <th>History</th>
-                </tr>
-                {
-                    patientsData.map(patient => {
-                        return <tr>
-                            <td>{patient.name}</td>
-                            <td>{patient.species}</td>
-                            <td>{patient.history}</td>
-                        </tr>
-                    })
-                }
+                <thead>
+                   <tr>
+                        <th>Name</th>
+                        <th>Species</th>
+                        <th>History</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                    {
+                        patientsData.map(patient => {
+                            return <tr key={patient.id}>
+                                <td>{patient.name}</td>
+                                <td>{patient.species}</td>
+                                <td>{patient.history}</td>
+                            </tr>
+                        })
+                    } 
+                </tbody>
+                
             </table>
         </div>
         
