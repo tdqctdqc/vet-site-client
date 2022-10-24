@@ -21,8 +21,12 @@ function DisplayVet({host}) {
 
     return (<>
         <h1>{vetData.name}</h1>
-        <Link to={`/vet/${id}/clients`}>See Clients</Link>
-        <Link to={`/vet/${id}/patients`}>See Patients</Link>
+        <div>
+            <Link to={`/vet/${id}/clients`}>See Clients</Link>
+        </div>
+        <div>
+            <Link to={`/vet/${id}/patients`}>See Patients</Link>
+        </div>
     </>);
 }
 
